@@ -1,3 +1,4 @@
 install/*
 keycloak-quickstarts
+redhat-sso-quickstarts/
 .DS_Store
