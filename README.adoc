@@ -1,0 +1,19 @@
+== Red Hat Single Sign On Demo
+
+=== Requirements
+
+* EAP 7 binaries
+* EAP 7 OpenID adapter
+* EAP 7 SAML adapter
+* RH SSO 7.1 binary
+
+=== Setup
+
+    ./setup.sh 
+
+== Console Admin
+
+http://localhost:8080/app-html5/
+
+http://localhost:8080/app-profile-html5/
+
