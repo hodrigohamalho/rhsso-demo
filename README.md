@@ -30,8 +30,6 @@ Follow the logs (Optional),
 
 This phase, deploy 3 quickstarts in EAP to demonstrate a single sign on using OpenId. It import those applications in RHSSO as clients. 
 
-Just with it you can navigate and show the mainly SSO features.
-
 [Quickstarts](https://github.com/redhat-developer/redhat-sso-quickstarts) deployed: 
 
 * [service-jee-jaxrs](https://github.com/redhat-developer/redhat-sso-quickstarts/tree/7.1.x/service-jee-jaxrs)
@@ -41,6 +39,8 @@ Just with it you can navigate and show the mainly SSO features.
 To deploy, run: 
 
     ./setup.sh deploy
+
+Once deployed, you can navigate and show the mainly SSO features.
 
 You need to configure the user and roles as described in the [quickstarts doc](https://github.com/redhat-developer/redhat-sso-quickstarts#create-roles-and-user).
 
