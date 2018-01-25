@@ -2,7 +2,7 @@
 
 ## Product Introduction
 
-Usually, I use this presentation (PTBR) that I forked from [github.com/rafaeltuelho](@rafaeltuelho) to introduct Keycloak: http://redhat.slides.com/rdasilva/rh-sso-keycloak?token=gPXwtPW_
+Usually, I use this presentation (PTBR) that I forked from [@rafaeltuelho](github.com/rafaeltuelho) to introduct Keycloak: http://redhat.slides.com/rdasilva/rh-sso-keycloak?token=gPXwtPW_
 
 ## Requirements
 
