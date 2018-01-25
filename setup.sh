@@ -23,17 +23,20 @@ function validateRequirements(){
 	fi
 
 	if [ -r $SSO_INSTALLER ] || [ -L $SSO_INSTALLER ]; then
-			printf "\n JBoss SSO installer is present... \n"
+		printf "\n JBoss SSO installer is present... \n"
 	else
-			printf "\n Need to download SSO installer from the Customer Portal"
-			printf "\n\t and place it in the $BINARIES_DIR directory to proceed... \n"
-			exit
+		printf "\n Need to download SSO installer from the Customer Portal"
+		printf "\n\t and place it in the $BINARIES_DIR directory to proceed... \n"
+		exit
 	fi
 }
 
 function installEAP(){
 	printf "\n Installing EAP, please wait..."
-
+	if [ -r $TARGET_DIR ]; then
+		mkdir $TARGET_DIR
+	fi
+	
 	unzip -q $EAP_INSTALLER -d $TARGET_DIR
 	rm $EAP_HOME/bin/*.bat
 
