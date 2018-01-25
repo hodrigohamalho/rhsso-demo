@@ -1,4 +1,8 @@
-# Red Hat Single Sign On Demo
+# Red Hat Single Sign on (aka Keycloak) Demo
+
+## Product Introduction
+
+Usually, I use this presentation (PTBR) that I forked from [github.com/rafaeltuelho](@rafaeltuelho) to introduct Keycloak: http://redhat.slides.com/rdasilva/rh-sso-keycloak?token=gPXwtPW_
 
 ## Requirements
 
@@ -49,6 +53,7 @@ Now, you can navigate in the applications:
 * http://localhost:8080/app-profile-html5/
 
 * http://localhost:8080/app-jsp
+
 
 
 
