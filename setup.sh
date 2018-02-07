@@ -121,12 +121,12 @@ case "$1" in
 		;;
 	start)
 		nohup $SSO_HOME/bin/standalone.sh -Djboss.socket.binding.port-offset=100 > sso.log &
-		printf "\n SSO starting... check http://localhost:9990"
+		printf "\n EAP starting... check http://localhost:9990"
 		printf "\n\t User: admin"
 		printf "\n\t Pass: admin\n"
 
 		nohup $EAP_HOME/bin/standalone.sh > eap.log &
-		printf "\n EAP starting... check http://localhost:8180/auth/admin/"
+		printf "\n SSO starting... check http://localhost:8180/auth/admin/"
 		printf "\n\t User: admin"
 		printf "\n\t Pass: admin\n"
 		;;
