@@ -33,7 +33,7 @@ function validateRequirements(){
 
 function installEAP(){
 	printf "\n Installing EAP, please wait..."
-	if [ -r $TARGET_DIR ]; then
+	if [ ! -r $TARGET_DIR ]; then
 		mkdir $TARGET_DIR
 	fi
 	
@@ -103,10 +103,10 @@ function deployQuickstarts(){
 }
 
 function importQuickstartsInKeycloak(){
-	sh install/rh-sso-7.1/bin/kcadm.sh config credentials --server http://localhost:8180/auth --realm master --user admin --password admin
-	sh install/rh-sso-7.1/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/service-jee-jaxrs/config/client-import.json
-	sh install/rh-sso-7.1/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/app-profile-jee-html5/config/client-import.json
-	sh install/rh-sso-7.1/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/app-jee-jsp/config/client-import.json
+	sh $SSO_HOME/bin/kcadm.sh config credentials --server http://localhost:8180/auth --realm master --user admin --password admin
+	sh $SSO_HOME/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/service-jee-jaxrs/config/client-import.json
+	sh $SSO_HOME/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/app-profile-jee-html5/config/client-import.json
+	sh $SSO_HOME/bin/kcadm.sh create clients -r master -f redhat-sso-quickstarts/app-jee-jsp/config/client-import.json
 }
 
 case "$1" in
@@ -141,7 +141,7 @@ case "$1" in
 		importQuickstartsInKeycloak
 		;;
 	*)
-		echo $"Usage: $0  install | uninstall | start | eap-logs | sso-logs"
+		echo $"Usage: $0  install | uninstall | start | deploy | eap-logs | sso-logs"
 		exit 1
 
 esac
